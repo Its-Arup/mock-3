@@ -2,8 +2,8 @@ import React from "react";
 
 function SingleCard({img,name,market_cap_rank,symbol,price_change_24h,current_price,total_volume,low_24h,high_24h,ath}) {
 
-    console.log(total_volume)
-  return <div className="container">
+    console.log(name)
+  return <div className="cont">
     <div className="img-wrapper">
         <img src={img} alt="img" />
     </div>

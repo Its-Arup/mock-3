@@ -58,7 +58,10 @@ tr{
   gap: 10px;
 }
 .container.active{
-  display : block
+  display : block;
+}
+.cont{
+  border : 1px solid #000;
 }
 
 

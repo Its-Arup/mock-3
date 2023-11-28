@@ -26,7 +26,7 @@ function CoiinTable() {
     axios({
       method: "get",
       url: url,
-      params: {params},
+      params: params,
     })
       .then((res) => {
         console.log(res.data);
@@ -38,10 +38,15 @@ function CoiinTable() {
   };
 
   useEffect(() => {
-    let Base_url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${
-      currency || "INR"
-    }&per_page=10&page=${page}`;
+    // let Base_url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${
+    //   currency || "INR"
+    // }&per_page=10&page=${page}`;
+    let Base_url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency || "INR"}`;
 
+    // fetchData(`${baseURL}?vs_currency=${currency}&order=market_cap_${sortOrder}&per_page=10&page=${page}`);
+    
+    // fetchData(`${baseURL}?vs_currency=${currency}`);
+    
     // if(sortOrder != "" && currency != ""){
     //     Base_url = Base_url+`&order=${sortOrder}&currency=${currency}`
     // }else if(sortOrder != ""){
@@ -51,7 +56,7 @@ function CoiinTable() {
     // }
     const params = {
       currency: currency,
-      sortOrder: sortOrder,
+      order: sortOrder,
     };
     fetchData(Base_url,params)
   }, [page, sortOrder, currency]);
