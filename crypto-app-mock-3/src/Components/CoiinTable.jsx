@@ -38,10 +38,10 @@ function CoiinTable() {
   };
 
   useEffect(() => {
-    // let Base_url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${
-    //   currency || "INR"
-    // }&per_page=10&page=${page}`;
-    let Base_url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency || "INR"}`;
+    let Base_url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${
+      currency || "INR"
+    }&per_page=10&page=${page}`;
+    // let Base_url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency || "INR"}`;
 
     // fetchData(`${baseURL}?vs_currency=${currency}&order=market_cap_${sortOrder}&per_page=10&page=${page}`);
     
